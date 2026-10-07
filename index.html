@@ -13,7 +13,7 @@
         <a href="#tracks"> Направления </a>
         <a href="#schedule"> Расписание </a>
         <a href="#signup"> Регистрация </a>
-    </nav class="site-nav">
+    </nav>
      
 
     <h1> "HTML и базовая CSS-разметка. Семантическая структура страницы"</h1>
@@ -24,9 +24,10 @@
     <!--О курсе-->
     <section id = 'about'>
         <h2> О курсе </h2>
+        <img src="images/logo.svg" id="logo" alt="Логотип проекта" width="300" height="200">
         
     </section>
-    <img src="images/logo.svg" alt="Логотип проекта" width="300" height="200"> </img>
+     
     
     <!--Направления-->
     <section id = "tracks">
@@ -133,26 +134,41 @@
     <section id = "signup">
         <h2> Регистрация </h2>
         <form>
-            <label> Введите фамилию:</label>
-            <input>
-            <label> Имя: </label>
-            <input>
-            <label> Отчество: </label>
-            <input>
-            <label> Почта: </label>
-            <input type="email">
-            <label> Пол: 
-            <select>
-                <option value="Male">Женский</option>
-                <option value="Female">Мужской</option>
+            <label for="lastname"> Введите фамилию:
+                <input type="text" id="lastname" required minlength="2" maxlength="50">
+            </label>
+            
+            <label for = "name"> Имя: 
+                 <input type="text" id="name" required minlength="2" maxlength="50">
+            </label>
+            
+            <label for = "patronymic"> Отчество:
+                 <input type="text" id="patronymic" >
+                 </label>
+            
+            <label for ="email"> Почта: 
+                 <input type="email" id="email">
+            </label>
+            
+            <label for = "gender"> Пол: 
+            <select id="gender">
+                <option value="Female">Женский</option>
+                <option value="Male">Мужской</option>
             </select>
             </label>
-            <label> Дата рождения: </label>
-            <input type="date">
-            <label> Придумайте пароль: </label>
-            <input type="password">
-            <label> Форма для обратной связи: </label>
-               <textarea> </textarea>
+            <label for ="birthdate"> Дата рождения: 
+                 <input type="date" id="birthdate" max="2025-01-01">
+            </label>
+            
+            <label for ="password"> Придумайте пароль: 
+                 <input type="password" id="password" required minlength="8" maxlength="50">
+            </label>
+            
+            <label for = "feedback"> Форма для обратной связи: 
+                 <textarea type="textarea" id="feedback" required minlength="2" maxlength="10000"> 
+                 </textarea>
+            </label>
+               
             <button>Отправить</button>
 
         </form>
@@ -161,6 +177,13 @@
 
 
   </main>
-  <footer>...</footer>
+  <footer> 
+    <p>
+        2026 
+        <br>Дисциплина: Технологии разработки программного обеспечения 
+        <br> Группа: ЭПБО-01-25
+        <br> Кинах Дарья
+    </p>
+  </footer>
 </body>
 </html>
